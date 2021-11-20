@@ -1,0 +1,30 @@
+
+nav{
+    height: 120px; /*should be 120px from the top*/
+    width: 100vw;
+    background: #4056A1;
+    color: #FFFFFF; /*text font wont change to white*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+#title{
+    font-family: Bungee;
+    margin-left: 1.5em;
+    
+
+}
+
+.icontext{
+    margin-right: 1.5em;    
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.fa-angle-double-down{
+ color: red;
+}

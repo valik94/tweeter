@@ -1,0 +1,12 @@
+header { 
+display: flex;
+height: 400px;
+width:100%;
+justify-content:center;
+align-items: center;
+background-color: #475c00;
+color:white;
+background-image: url(http://www.transparenttextures.com/patterns/dark-brick-wall.png);
+margin-top: 100px;
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}

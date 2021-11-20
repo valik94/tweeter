@@ -7,23 +7,68 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- External HTML FONTS Bungee weight 400 and Source Sans Pro- 300 & 600 and italics versions of both-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+
+    <!-- External CSS Link for awesome-font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Link to nav.css -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <!-- Link to new-tweet.css -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
 
-  <body>
+  </head>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span id= 'title'>tweeter</span>
+        <!-- Double down button added -->
+    <div class = "icontext">
+      <p><strong>Write</strong> a new tweet!</p>
+      <i class="fas fa-angle-double-down"></i> 
+    </div>
+         
     </nav>
-
+    <header>
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2>Your Name</h2>
+      </div>
+  </header>
+  <body>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets/">
+          <footer>
+            <!-- <label for="tweet-text"><strong>What are you humming about?</strong></label> -->
+            <textarea name="text" id="tweet-text" placeholder = "What are you humming about?"></textarea>
+            <div class="tweet-bottom">
+              <button type="submit">Tweet</button>
+              <output id = "counter" name="counter" class="counter" for="tweet-text">140</output>
+            </footer>
+          </div>
+        </form>
+      </section>
+  </main>
   </body>
+ <!-- App JS -->
+ <script type="text/javascript" src="/scripts/client.js"></script>
+ <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>
