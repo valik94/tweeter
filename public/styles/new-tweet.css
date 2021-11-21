@@ -47,3 +47,25 @@ button, select {
 .counter-red{
 color: red;
 }
+.tweet-record{
+box-shadow: 10px 10px green;
+}
+
+.tweet-article {
+    /* background-color: orange; */
+    border: 5px black solid;
+    padding: 20px;
+}
+
+
+.tweet-article header{
+    margin-bottom: 20px;
+}
+.tweet-article footer i:hover{
+    color: rgb(175, 196, 40);
+}
+
+.tweet-article footer {
+    display: flex;
+    justify-content: space-between;
+}
