@@ -37,10 +37,11 @@
 
            <script>
               $(function () {
-                const $button = $('#Tweets');
-                $button.submit(function (event) {
+                const $form = $('form');
+                $form.submit(function (event) {
+                  event.preventDefault();
                   console.log('Button clicked, performing ajax call...');
-                  $.ajax({ method: 'POST' })
+                  $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
                     .then(function (event) {
                       console.log('Success: ', event);
                       return;

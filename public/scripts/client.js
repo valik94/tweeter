@@ -36,7 +36,7 @@ const tweetData = {
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1461116232227
+    "created_at": 1637534130541
   },
   {
     "user": {
@@ -71,7 +71,7 @@ let $tweet = $(`<article class="tweet-article">
                     ${tweetData.content.text}
                     </header>
                     <footer>
-                      <span class="need_to_be_rendered" datetime= "${new Date(tweetData.created_at).toDateString()}">2016-07-07</span>
+                      <span class="need_to_be_rendered" datetime= '${new Date(tweetData.created_at).toISOString()}'>${new Date(tweetData.created_at).toISOString()}</span>
                       <div>
                           <i class="fas fa-flag"></i>
                           <i class="fas fa-retweet"></i>
@@ -79,7 +79,7 @@ let $tweet = $(`<article class="tweet-article">
                       </div>
                     </footer>
                 </article>`);
-console.log(new Date(tweetData.created_at).toDateString());
+console.log(new Date(tweetData.created_at).toISOString());
 console.log($tweet.get());
 return $tweet;
 }
