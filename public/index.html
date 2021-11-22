@@ -35,27 +35,18 @@
   <!-- External AJAX JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-           <script>
-              $(function () {
-                const $form = $('form');
-                $form.submit(function (event) {
-                  event.preventDefault();
-                  console.log('Button clicked, performing ajax call...');
-                  $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
-                    .then(function (event) {
-                      console.log('Success: ', event);
-                      return;
-                    });
-                });
-              });
-            </script>
+
 
   <!-- timeago.js library downloaded from CDN source -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" type="text/javascript"></script>
 
   <!-- App JS  Client.js and composter-char-counter.js-->
 <script type="text/javascript" src="/scripts/client.js"></script>
+
 <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+<!--  Form JS import script -->
+<script type="text/javascript" src="/scripts/form.js"></script>
 
 </head>
 
