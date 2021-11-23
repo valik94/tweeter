@@ -48,13 +48,11 @@ button, select {
 color: red;
 }
 
-
 .tweet-article {
     /* background-color: orange; */
     border: 5px black solid;
     padding: 20px;
 }
-
 
 .tweet-article header{
     margin-bottom: 20px;

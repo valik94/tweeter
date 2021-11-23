@@ -5,7 +5,6 @@ $(function () {
     event.preventDefault();
     console.log('Button clicked, performing ajax call...');
         const content =  $('textarea').val(); 
-    console.log(content.length);
     if (content.length >= 140){ //regular character input validation
         $('.error-message').html('<i class="fas fa-exclamation-triangle"></i> Too long. Please respect our arbitrary counter limit of 140 <i class="fas fa-exclamation-triangle"></i>');
         $('.error-message').slideDown();
@@ -21,11 +20,11 @@ $(function () {
         let tweetTextArea=$('#tweet-text');
         tweetTextArea.val(""); //reset text area
         let counter = $('#counter');
-        counter.text(140);
+        counter.text(140); //reset count to 140
         loadTweets();
         console.log('Success: ', event);
 
-        //return;
+        
       });
     }
   });

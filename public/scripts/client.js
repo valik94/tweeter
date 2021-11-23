@@ -18,7 +18,6 @@ const renderTweets = function(tweets) { //passed in tweets array
      $returnedValue = createTweetElement($tweet);   // calls createTweetElement for each tweet
 
      result = $('#tweet-record').prepend($returnedValue);   // takes return value and appends it to the tweets container
-    //console.log(result);
    }
    timeago.render(document.querySelectorAll('.need_to_be_rendered'));
    return;
@@ -33,7 +32,6 @@ const escape = function (str) {
 
 
 const createTweetElement = function (tweetData) {
-console.log(tweetData);
   const safeHTML = `<p>${escape(tweetData.content.text)}</p>`; //Preventing XSS with escaping using method 2
 
   let $tweet = $(`<article class="tweet-article">
@@ -58,7 +56,6 @@ console.log(tweetData);
   
   
   console.log(new Date(tweetData.created_at).toISOString());
-  console.log($tweet.get());
   return $tweet;
   }
 
@@ -68,7 +65,6 @@ const loadTweets = function (){
     renderTweets(data);
 
   })
-  // let parsedData = $.parseJSON();
 }
 
 
@@ -77,8 +73,6 @@ $(document).ready(function() {
 
 loadTweets();
 
-// timeago.register('pt_BR', locale);
-// timeago.render(document.querySelectorAll('.need_to_be_rendered'));
 $('footer').on('keyup', function(){
 const currentTime= timeago.format(Date.now(), 'en_US'); 
 })
