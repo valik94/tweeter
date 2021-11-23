@@ -1,6 +1,6 @@
 $(function () {
   const $form = $('form');
-  $('.error-message').hide();
+  $('.error-message').hide(); //hide error message to be displayed only if certain condition checked later
   $form.submit(function (event) {
     event.preventDefault();
     console.log('Button clicked, performing ajax call...');
