@@ -40,6 +40,8 @@ console.log(tweetData);
                       <header>
                       ${safeHTML}
                       <img src='${tweetData.user.avatars}'/>
+                      <p>${tweetData.user.name}</p>
+                      <p>${tweetData.user.handle}</p>
                       </header>
                       <footer>
                         <span class="need_to_be_rendered" datetime= '${new Date(tweetData.created_at).toISOString()}'>${new Date(tweetData.created_at).toISOString()}</span>

@@ -35,7 +35,7 @@ body {
  }
 
  /* Desktop Styles */
- @media only screen and (min-width: 1440px) {
+ @media only screen and (min-width: 1024px) {
    /* This container controls the avatar and the tweets. */
    .overall-container {
     display: flex;
