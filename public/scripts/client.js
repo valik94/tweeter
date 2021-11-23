@@ -38,10 +38,12 @@ console.log(tweetData);
 
   let $tweet = $(`<article class="tweet-article">
                       <header>
-                      ${safeHTML}
                       <img src='${tweetData.user.avatars}'/>
-                      <p>${tweetData.user.name}</p>
-                      <p>${tweetData.user.handle}</p>
+                      <div class="userdata">
+                      <div id='nameOfUser'>${tweetData.user.name}</div>
+                      <div id='handleOfUser'>${tweetData.user.handle}</div>
+                      </div>
+                      ${safeHTML}
                       </header>
                       <footer>
                         <span class="need_to_be_rendered" datetime= '${new Date(tweetData.created_at).toISOString()}'>${new Date(tweetData.created_at).toISOString()}</span>

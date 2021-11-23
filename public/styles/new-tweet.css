@@ -73,3 +73,8 @@ color: red;
     border: 5px red solid;
     
 }
+.userdata{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
