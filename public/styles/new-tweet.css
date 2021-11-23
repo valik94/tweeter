@@ -72,5 +72,6 @@ box-shadow: 10px 10px green;
 
 .error-message{
     color: red;
+    border: 5px red solid;
     
 }
