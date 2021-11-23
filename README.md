@@ -22,3 +22,7 @@ This repository is the starter code for the project: Students will fork and clon
 - md5 2.1.0
 - media-queries 1.0.5
 - timeago.js 4.0.2
+- 
+## Screenshots
+!["Screenshot of tweet create tweet box"](https://github.com/valik94/tweeter/blob/master/docs/Tweeter-homepage.png?raw=true)
+!["Screenshot of tweets created"](https://github.com/valik94/tweeter/blob/master/docs/Tweeter-newTweetCreated.png?raw=true)
