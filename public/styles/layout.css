@@ -44,8 +44,7 @@ body {
     margin-top: 100px;
    }
   /* Contains the new tweets textbox and all the tweets record.  */
-  .main-tweets-div{
-    display:flex;
-    flex-direction: column;
+  .tweets-main-div{
+    margin-right: 50px;
   }
 }

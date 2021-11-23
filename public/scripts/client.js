@@ -33,12 +33,13 @@ const escape = function (str) {
 
 
 const createTweetElement = function (tweetData) {
-
+console.log(tweetData);
   const safeHTML = `<p>${escape(tweetData.content.text)}</p>`; //Preventing XSS with escaping using method 2
 
   let $tweet = $(`<article class="tweet-article">
                       <header>
                       ${safeHTML}
+                      <img src='${tweetData.user.avatars}'/>
                       </header>
                       <footer>
                         <span class="need_to_be_rendered" datetime= '${new Date(tweetData.created_at).toISOString()}'>${new Date(tweetData.created_at).toISOString()}</span>

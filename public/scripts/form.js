@@ -18,13 +18,13 @@ $(function () {
     //perform jQuery ajax POST request in event of proper input
     $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
       .then(function (event) {
-        let tweetRecord = $('#tweet-record');
-        tweetRecord.empty();
         let tweetTextArea=$('#tweet-text');
-        console.log(tweetTextArea);
-        tweetTextArea.empty();
+        tweetTextArea.val(""); //reset text area
+        let counter = $('#counter');
+        counter.text(140);
         loadTweets();
         console.log('Success: ', event);
+
         //return;
       });
     }
