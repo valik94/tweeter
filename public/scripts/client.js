@@ -24,12 +24,20 @@ const renderTweets = function(tweets) { //passed in tweets array
 }
 
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 const createTweetElement = function (tweetData) {
 
+  const safeHTML = `<p>${escape(tweetData.content.text)}</p>`; //Preventing XSS with escaping using method 2
 
   let $tweet = $(`<article class="tweet-article">
                       <header>
-                      ${tweetData.content.text}
+                      ${safeHTML}
                       </header>
                       <footer>
                         <span class="need_to_be_rendered" datetime= '${new Date(tweetData.created_at).toISOString()}'>${new Date(tweetData.created_at).toISOString()}</span>
@@ -40,6 +48,8 @@ const createTweetElement = function (tweetData) {
                         </div>
                       </footer>
                   </article>`);
+
+  
   
   console.log(new Date(tweetData.created_at).toISOString());
   console.log($tweet.get());
@@ -54,6 +64,8 @@ const loadTweets = function (){
   })
   // let parsedData = $.parseJSON();
 }
+
+
 
 $(document).ready(function() {
 

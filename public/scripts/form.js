@@ -1,17 +1,21 @@
 $(function () {
   const $form = $('form');
+  $('.error-message').hide();
   $form.submit(function (event) {
     event.preventDefault();
     console.log('Button clicked, performing ajax call...');
-    const content = $('textarea').val();
-    console.log(content);
-    if (content.length >= 140){
-        alert(`tweet is ${content.length} characters long, use 140 as allowable limit`);
+        const content =  $('textarea').val(); 
+    console.log(content.length);
+    if (content.length >= 140){ //regular character input validation
+        $('.error-message').html('<i class="fas fa-exclamation-triangle"></i> Too long. Please respect our arbitrary counter limit of 140<i class="fas fa-exclamation-triangle"></i>');
+        $('.error-message').slideDown();
     }
-    else if (!content){
-        alert(`tweet is empty, please enter something to tweet.`);
+    else if (content.length === 0){ //input validation for empty input
+      $('.error-message').html('<i class="fas fa-exclamation-triangle"></i> Please don\'t submit blank tweet<i class="fas fa-exclamation-triangle"></i>');
+      $('.error-message').slideDown();
     }
-else {
+    else {
+    //perform jQuery ajax POST request in event of proper input
     $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
       .then(function (event) {
         let tweetRecord = $('#tweet-record');
