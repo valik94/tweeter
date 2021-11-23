@@ -13,10 +13,11 @@
 const renderTweets = function(tweets) { //passed in tweets array
   let $returnedValue;
   let result =''; 
+  $('#tweet-record').empty();
   for (let $tweet of tweets) { // loops through tweets
      $returnedValue = createTweetElement($tweet);   // calls createTweetElement for each tweet
 
-     result = $('#tweet-record').append($returnedValue);   // takes return value and appends it to the tweets container
+     result = $('#tweet-record').prepend($returnedValue);   // takes return value and appends it to the tweets container
     //console.log(result);
    }
    timeago.render(document.querySelectorAll('.need_to_be_rendered'));
@@ -70,7 +71,6 @@ const loadTweets = function (){
 $(document).ready(function() {
 
 loadTweets();
-
 
 // timeago.register('pt_BR', locale);
 // timeago.render(document.querySelectorAll('.need_to_be_rendered'));

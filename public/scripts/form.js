@@ -20,12 +20,13 @@ $(function () {
       .then(function (event) {
         let tweetRecord = $('#tweet-record');
         tweetRecord.empty();
+        let tweetTextArea=$('#tweet-text');
+        console.log(tweetTextArea);
+        tweetTextArea.empty();
         loadTweets();
         console.log('Success: ', event);
-        return;
-      
+        //return;
       });
     }
   });
-
 });

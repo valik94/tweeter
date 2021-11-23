@@ -28,8 +28,31 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  .container {
-   width: 90%;
+   /* width: 90%; */
    margin: auto;
   background-color: #f4f1ec;
 
  }
+
+ /* Desktop Styles */
+ @media only screen and (min-width: 1440px) {
+   /* This container controls the avatar and the tweets. */
+   .overall-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+    outline: 1px solid tomato;
+    border: 1px solid tomato;
+   }
+  /* Contains the new tweets textbox and all the tweets record.  */
+  .main-tweets-div{
+    background-color: pink;
+    display:flex;
+    flex-direction: column;
+    border: 2px solid tomato;
+  }
+  .container {
+    border: 2px tomato;
+  }
+}
